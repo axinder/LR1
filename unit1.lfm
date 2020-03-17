@@ -1,0 +1,138 @@
+object Form1: TForm1
+  Left = 501
+  Height = 300
+  Top = 571
+  Width = 400
+  Caption = 'Form1'
+  ClientHeight = 274
+  ClientWidth = 400
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.0.0.4'
+  object Memo1: TMemo
+    Left = 0
+    Height = 274
+    Top = 0
+    Width = 400
+    Align = alClient
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 24
+    top = 208
+    object Fail: TMenuItem
+      Caption = 'Файл'
+      object Novi: TMenuItem
+        Caption = 'Новый'
+        OnClick = NoviClick
+      end
+      object Otkrit: TMenuItem
+        Caption = 'Открыть'
+        OnClick = OtkritClick
+      end
+      object Zakrit: TMenuItem
+        Caption = 'Закрыть'
+      end
+      object Sohranit: TMenuItem
+        Caption = 'Сохранить'
+      end
+      object Sohranitkak: TMenuItem
+        Caption = 'Сохранить как'
+        OnClick = SohranitkakClick
+      end
+      object Vihod: TMenuItem
+        Caption = 'Выход'
+        OnClick = VihodClick
+      end
+    end
+    object Pravka: TMenuItem
+      Caption = 'Правка'
+      object Videlitvse: TMenuItem
+        Caption = 'Выделить все'
+        OnClick = VidelitvseClick
+      end
+      object Virezat: TMenuItem
+        Caption = 'Вырезать'
+        OnClick = VirezatClick
+      end
+      object Kopirovat: TMenuItem
+        Caption = 'Копировать'
+        OnClick = KopirovatClick
+      end
+      object Vstavit: TMenuItem
+        Caption = 'Вставить'
+        OnClick = VstavitClick
+      end
+    end
+    object Vid: TMenuItem
+      Caption = 'Вид'
+      object Shrift: TMenuItem
+        Caption = 'Шрифт'
+        OnClick = ShriftClick
+      end
+      object Tema: TMenuItem
+        Caption = 'Тема оформления'
+        OnClick = TemaClick
+        object Tema1: TMenuItem
+          Caption = 'Тема 1'
+          OnClick = Tema1Click
+        end
+        object Tema2: TMenuItem
+          Caption = 'Тема 2'
+          OnClick = Tema2Click
+        end
+        object Tema3: TMenuItem
+          Caption = 'Тема 3'
+          OnClick = Tema3Click
+        end
+      end
+    end
+    object Poisk: TMenuItem
+      Caption = 'Поиск'
+      object Naiti: TMenuItem
+        Caption = 'Найти'
+        OnClick = NaitiClick
+      end
+      object Zamenit: TMenuItem
+        Caption = 'Заменить'
+        OnClick = ZamenitClick
+      end
+    end
+    object Spravka: TMenuItem
+      Caption = 'Справка'
+      object Spravka1: TMenuItem
+        Caption = 'Справка'
+        OnClick = Spravka1Click
+      end
+      object Oprogramme: TMenuItem
+        Caption = 'О Программе'
+        OnClick = OprogrammeClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Текстовые файлы|*.txt|Файлы pas|*.pas|Все файлы|*.*'
+    left = 88
+    top = 208
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.txt'
+    left = 160
+    top = 208
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 240
+    top = 208
+  end
+  object FindDialog1: TFindDialog
+    left = 88
+    top = 152
+  end
+  object ReplaceDialog1: TReplaceDialog
+    Options = [frDown, frReplace, frReplaceAll, frHidePromptOnReplace]
+    left = 24
+    top = 152
+  end
+end
